@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Cano's Personal Website</title>
 </head>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Who is Jorge')">Who is Jorge?</button>
+        <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'Contact Me')">Contact Me</button>
+    </div>
+    <div id="Who is Jorge?" class="tabcontent">
+        <h3>Who is Jorge?</h3>
+        <p> Jorge is a hard-working, diligent, and soldiering soul. He works for what he wants, he has worked for what he has. This website is still under the works and in it's simplest most purest form.</p>
+    </div>
+    <div id="Projects" class="tabcontent">
+        <h3>Projects</h3>
+        <p> Here you will find my work. It has yet to be uploaded.</p>
+    </div>
+    <div id="Contact Me" class="tabcontent">
+        <h3>Contact Me</h3>
+        <p> (708)953-6472 
+            jorgecano2203@gmail.com
+            jcano1@my.dom.edu</p>
+    </div>
 <body>
+    
     <header>
-       <h1>Jorge Cano</h1>
+        <h1>Jorge Cano</h1>
         <h2>Website of a fierce and indomitable soul.</h2>
     </header>
 
@@ -42,7 +62,26 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Canos Website. All Rights Reserved.</p>
+        <p>&copy; 2023 JorgeCano Website. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
+
+<script>
+    function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
